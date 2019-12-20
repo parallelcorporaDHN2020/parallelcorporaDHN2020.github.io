@@ -20,6 +20,10 @@ li {
 	margin: 0.5em 0;
 }
 
+td {
+	padding: 4px;
+}
+
 .page {
 	max-width: 1000px;
 	margin: 0 auto;
@@ -46,6 +50,10 @@ li {
 }
 .nav a {
 	color: black;
+}
+
+.break td {
+	padding-top: 16px;
 }
 
 .content {
