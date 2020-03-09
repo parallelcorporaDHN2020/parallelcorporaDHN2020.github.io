@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Computational Methods Meet Parallel Data: Approaches for
+		Comparative Analysis of Passives in European Languages</title>
+	<link rel="stylesheet" href="../style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="page">
+		<div class="nav">
+			<h5>
+				Parallel Corpora as Digital Resources and Their Applications
+			</h5>
+			<ul>
+				<li>
+					<a href="/">&larr; back to workshop</a>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			
+
+
+
+	
+	
+	
+	
+	
+	
+
+<p>
+<b>Computational Methods Meet Parallel Data: Approaches for
+Comparative Analysis of Passives in European Languages</b></p>
+<p>
+<i>Liubov Nesterenko, Anastasia Bonch-Osmolovskaya</i></p>
+<p>
+<i>National Research University Higher School of Economics, Moscow</i></p>
+<p><br />
+
+</p>
+<p>	In
+this paper, I describe three applications of computational approaches
+in passive alternation research: "parallel" logistic
+regression for analysis of features that motivate the choice between
+active and passive in different languages; PCA scaling for measuring
+the similarity between the source passive construction and the
+language expressions used in translation; cluster analysis of similar
+translation units (translation unit = a set of translations for one
+source situation).</p>
+<p><i>	</i></p>
+<p>	I
+use a collection of J.K. Rowling Harry Potter books series from 1 to
+7 in English, German, Swedish, French, Italian, Spanish, Russian,
+Czech and Bulgarian, approximately 1 million tokens per language. The
+texts were aligned using Gale &amp; Church algorithm (Gale, Church
+1991) and Efmaral toolkit (Östling, Tiedeman 2016) for sentence and
+word alignment respectively, and also processed with UDPipe parser
+(Straka, Straková 2017). Automatical alignment and annotation is a
+huge step in data preparation, but I should note, that my dataset
+examples extracted from the corpus demanded manual check up and
+correction.</p>
+<p><br />
+
+</p>
+<p>	<i>Experiment</i><i>
+1</i></p>
+<p>	A
+remarkable issue about voice alternation is the motivation for
+choosing active instead of passive, i.e. ‘This essay was written by
+Mary’ vs. ‘Mary wrote this essay’. Relying on theoretical
+studies, I selected a bunch of features claimed to be important for
+this kind of choice and used them for training logistic regression
+models. Based on model coefficients, we can detect which features
+appear to be passive triggers.</p>
+<p>	The
+major trick is that we use universal situation-based features
+applicable to all languages (one feature matrix), but the labels for
+model training vary depending on the language, e.g., five instances
+in Russian might be tagged as A, A, P, P, P (A for active, P for
+passive) but the corresponding instances in Spanish tagged P, A, P,
+P, A, in other words, different active/passive distributions result
+into different label sets for training (Bonch-Osmolovskaya,
+Nesterenko 2019).</p>
+<p><br />
+
+</p>
+<p>	<i>Experiment</i><i>
+2</i></p>
+<p>	Unlike
+the elicitation where linguists use the starred (=incorrect) examples
+as a special type of data, in translation a person is forced to
+choose any relevant language means for the translational equivalent,
+these expressions can be the same, quite similar or completely
+different from those used in the source text. Hence, we can measure
+the level of similarity for the translation and the source based on a
+number of their characteristics. I elaborate a set of features for
+passives with overtly expressed agents which reflect its similarity
+to the translation equivalents (transitive active, impersonal
+passive, etc.). This allows us to compute the level of similarity for
+each translation equivalent and also, based on that, compute an
+overall level of passiveness for each translation unit. As a result,
+I draw plots that represent the distribution of translation
+equivalents types in languages.</p>
+<p><br />
+
+</p>
+<p><br />
+
+</p>
+<p>	<i>Experiment</i><i>
+3</i></p>
+<p>	A
+brief exploration of translation units shows that there are English
+passives translated as passives in all or almost all languages, but
+there are also those that have more non-passive translations. Based
+on the similarity of the translation units we can cluster them and
+get the groups of units that share common features. I suppose that
+units within each group share particular characteristics that can be
+used for further analysis of passive and related constructions. There
+is a  related study of lexical semantical based on clustering and
+measuring translation similarities, see (Wälchli, Cysouw 2012).</p>
+<p>	The
+cases described above show how different computational methods can be
+applied to parallel corpus data and on what aspects of comparison we
+can focus using either of them.</p>
+<p><br />
+
+</p>
+<p><b>	References</b></p>
+<p>Bonch-Osmolovskaya
+A.A., Nesterenko L.V. (2019). Multilingual parallel corpora as a
+source for 	quantitative cross-linguistic grammar research (the case
+of voice constructions), in: 	Computational
+	Linguistics and Intellectual Technologies. International Conference
+	"Dialogue 2019"
+Proceedings / Ed. by V. Selegey. Vol. 1. Issue 18 (25). M. :
+-, 2019.</p>
+<p>Gale
+W. A., Church K. W. (1991). Identifying Word Correspondences in
+Parallel Texts. HLT, 91, pp. 	152–157.</p>
+<p>Östling,
+R., Tiedemann, J. (2016). Efficient word alignment with markov chain
+montecarlo. The 	Prague Bulletin of Mathematical Linguistics, 106(1),
+pp. 125-146.</p>
+<p>Straka
+M., Straková J. (2017). Tokenizing, POS-tagging, lemmatizing and
+parsing UD 2.0 with 	UDPipe. Proceedings of the CoNLL 2017 Shared
+Task: Multilingual Parsing from Raw Text to 	Universal Dependencies,
+pp. 88–99.</p>
+<p>Wälchli
+B., Cysouw M. (2012). Lexical typology through similarity semantics:
+Toward a semantic map of motion verbs.</p>
+
+
+
+		</div>
+	</div>
+</body>
+</html>

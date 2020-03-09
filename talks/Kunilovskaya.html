@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Types
+		of translationese and register variation in English-to-Russian
+		professional translation </title>
+	<link rel="stylesheet" href="../style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="page">
+		<div class="nav">
+			<h5>
+				Parallel Corpora as Digital Resources and Their Applications
+			</h5>
+			<ul>
+				<li>
+					<a href="/">&larr; back to workshop</a>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+<p>
+<b>Maria Kunilovskaya</b></p>
+<p>Research Group in
+Computational Linguistics</p>
+<p>University of
+Wolverhampton, UK</p>
+<p><br />
+
+</p>
+<p><b>Types
+of translationese and register variation in English-to-Russian
+professional translation </b>
+</p>
+<p><br />
+
+</p>
+<p>This
+research relies on several parallel and comparable corpora to explore
+the linguistic properties of texts translated from English into
+Russian by professional translators across a variety of registers. It
+continues the line of investigations into the nature of translated
+texts powerfully put forward by Mona
+Baker (1993). In
+the translationese studies it is maintained that translations are
+statistically different from the originally authored texts in the
+target language, and their distinctive features are usually revealed
+through the comparison of translational corpora to genre- and domain-
+comparable non translations in the same language. The parallel
+component in this type of research is used to establish whether the
+languages in the translation pair are dissimilar with respect to a
+given feature and which linguistic phenomena are likely to trigger
+translationese given the comparative analysis of the languages,
+represented by the corpora.</p>
+<p>On
+the corpus resources side of the project, we explore the available
+English-Russian parallel corpora and formats and make use of
+self-compiled ones to build a register-balanced corpus for
+translationese studies. 
+</p>
+<p>To
+capture translationese, we develop a set of human-interpretable
+lexicogrammatic features shared by the two languages and known to be
+translationese indicators. Most of them are inspired by the previous
+research and intuitions in translation and translationese studies
+(Chesterman, 2010; Baroni &amp; Bernardini, 2006; Rabinovich &amp;
+Wintner, 2016; Volansky et al., 2015⁠), contrastive analysis and
+register studies. It includes the features that are empirically
+confirmed as relevant for the translationese detection task (for the
+purposes of this research, by univariate significance testing).
+Translationese indicators are extracted from Universal Dependencies
+(UD) annotation (Straka &amp; Straková, 2017)⁠, following a set of
+patterns similar to those suggested by Douglas Biber⁠ (1988) and
+adopted, for example, to the analysis of German translations by
+Stella Neumann (2013) for German and by Katinskaya and Sharoff
+(2015)⁠ for Russian. Our translationese indicators include
+type-to-token ratio, sentence length, frequencies of morphological
+forms (ex. non-finite forms of verb), syntactic relations (ex.
+clausal complements), syntactic functions (ex. modal predicates),
+word classes (ex. pronouns, discourse markers). It is known that the
+results of this type of research are contingent on the quality of the
+corpus annotation and feature extraction (Evert &amp; Neumann,
+2017)⁠. While it is unrealistically labour-intensive to verify the
+quality of out feature extraction by a human, in selecting the UD
+model for each language, we relied on the pre-trained models that
+returned most accurate results for our features and have the highest
+mean accuracy for UPOS (93.6/97.9), UFeats (94.4/93.7), Lemma
+(96.1/96.6) and Unlabelled attachment score (UAS) (80.8/87.9)
+reported at the respective UD page<a name="sdfootnote1anc" href="#sdfootnote1sym">1</a>.
+At the time of writing, it is 2.2 for English Web Treebank
+(English-EWT) and 2.3 for Russian-SynTagRus treebank, with the values
+indicated by figures in the brackets above for English and Russian
+respectively . 
+</p>
+<p>Typical
+translationese features for English-Russian translation include the
+overuse of relative clauses, copula verbs, modal predicates,
+analytical passives, overuse of generic nouns and all types of
+pronouns as shown in the examples below. Probably, none of the
+sentences below can be considered ungrammatical, but there is a
+Master Yoda -style foreign sound to them (all examples are real-life
+student translations from Russian Learner Translator corpus (Kutuzov
+&amp; Kunilovskaya, 2014)<a name="sdfootnote2anc" href="#sdfootnote2sym">2</a>.
+ 
+</p>
+<p>
+(1) Necklaces, at first as pectorals that covered the whole chest,
+evolved from the prehistoric pendants. Ожерелье – первое
+нагрудное украшение, <b>которое</b> занимало
+место на всей груди, <b>котор</b><b>о</b><b>е</b>
+стало основой для подвесок [Necklace – first
+chest decoration, which covered the whole chest, which became the
+basis for pendants].</p>
+<p>
+(2) …there are many self-employed people who manage to get money
+from others by means of falsely pretending to provide them with some
+benefit or service… Более того, <b>есть</b> много
+<b>людей</b>, работающих на себя, <b>которые</b>
+получают деньги обманным путем [Moreover,
+there are many people, working for themselves, who get the money in a
+deceitful way].</p>
+<p>
+(3) ...differences in self-efficacy may simply mean that some
+teachers struggle to identify solutions to problems beyond their
+circle of control. ...разница в самооценке <b>может
+означать </b>лишь то, что некоторые учителя
+испытывают сложности в нахождении
+решений задач <b>за пределами того, чем</b>
+они <b>могут управлять</b> [...diference in
+self-evaluation can mean only that some teachers run into
+difficulties in finding tolitions to tasks beyond the scope of what
+is under their contol].</p>
+<p><br />
+
+</p>
+<p>Further
+on, in this talk we introduce a method to calculate the amount of
+translationese manifested in the data and present its comparisons
+with the alter native strategies as well as the considerations about
+the role of the non-translated reference corpus in this line of
+research. By placing translations into the same feature space as
+their sources and the genre-comparable non-translated reference texts
+in the target language, we observe two separate translationese
+effects: a shift of translations into the gap between the source and
+the target languages and a shift away from either language. These
+trends are linked to the features that contribute to each of the
+effects. Methodologically, we rely on a selection of supervised and
+unsupervised machine learning techniques, such as Principle Component
+Analysis and Support Vector Machine classification, to explore our
+data and validate the results. In the end, we describe the observed
+variation of the professional norm across several registers at hand
+and compare the results for humans to machine translations. 
+</p>
+<p><br />
+
+</p>
+<p><b>References</b></p>
+<p>  
+</p>
+<div><p>
+	Baker,
+	M. (1993). Corpus Linguistics and Translation Studies: Implications
+	and Applications. In <i>Text and Technology: In honour of John
+	Sinclair</i> (pp. 232–250). J. Benjamins.
+	http://www.manchester.ac.uk/escholar/uk-ac-man-scw:3b3931</p>
+	<p>
+	Baroni,
+	M., &amp; Bernardini, S. (2006). A new approach to the study of
+	translationese: Machine-learning the difference between original and
+	translated text. <i>Literary and Linguistic Computing</i>, <i>21</i>(3),
+	259–274. https://doi.org/10.1093/llc/fqi039</p>
+	<p>
+	Biber,
+	D. (1988). <i>Variation across speech and writing</i> (2nd ed.).
+	Cambridge University Press.</p>
+	<p>
+	Chesterman,
+	A. (2010). Why Study Translation Universals? In R. Hartama-Heinonen
+	&amp; P. Kukkonen (Eds.), <i>Kiasm. Acta Translatologica
+	Helsingiensia</i> (Vol. 1, pp. 38–48). Helsingfors: Helsingfors
+	universitet, Nordica.</p>
+	<p>
+	Evert,
+	S., &amp; Neumann, S. (2017). The impact of translation direction on
+	characteristics of translated texts : A multivariate analysis for
+	English and German. <i>Empirical Translation Studies: New
+	Methodological and Theoretical Traditions</i>, <i>300</i>, 47.</p>
+	<p>
+	Katinskaya,
+	A., &amp; Sharoff, S. (2015). Applying Multi-Dimensional Analysis to
+	a Russian Webcorpus: Searching for Evidence of Genres. <i>The 5th
+	Workshop on Balto-Slavic Natural Language Processing</i>, <i>September</i>,
+	65–74. http://www.aclweb.org/anthology/W15-5311</p>
+	<p>
+	Kutuzov,
+	A., &amp; Kunilovskaya, M. (2014). Russian Learner Translator
+	Corpus: Design, Research Potential and Applications. <i>Text, Speech
+	and Dialogue: 17th International Conference, TSD 2014, Brno, Czech
+	Republic, September 8-12, 2014, Proceedings</i>, <i>8655</i>,
+	315–323.</p>
+	<p>
+	Neumann,
+	S. (2013). <i>LSB2013 conference - Genre- and Register-related Text
+	and Discourse Features in Multilingual Corpora 11-12 January 2013 -
+	Institut libre Marie Haps, Brussels (Belgium) -
+	www.mariehaps.be/lsb2013</i>. <i>January</i>, 11–13.</p>
+	<p>
+	Rabinovich,
+	E., &amp; Wintner, S. (2016). <i>Unsupervised Identification of
+	Translationese</i>. https://arxiv.org/pdf/1609.03205.pdf</p>
+	<p>
+	Straka,
+	M., &amp; Straková, J. (2017). Tokenizing, POS Tagging, Lemmatizing
+	and Parsing UD 2.0 with UDPipe. <i>Proceedings of the CoNLL 2017
+	Shared Task: Multilingual Parsing from Raw Text to Universal
+	Dependencies</i>, 88–99. http://www.aclweb.org/anthology/K17-3009</p>
+	<p>Volansky,
+	V., Ordan, N., &amp; Wintner, S. (2015). On the features of
+	translationese. <i>Digital
+	Scholarship in the Humanities</i>,
+	<i>30</i>(1),
+	98–118. https://doi.org/10.1093/llc/fqt031</p>
+</div>
+<div><p><a name="sdfootnote1sym" href="#sdfootnote1anc">1</a>http://ufal.mff.cuni.cz/udpipe/models#universal_dependencies_20_models</p>
+</div>
+<div><p><a name="sdfootnote2sym" href="#sdfootnote2anc">2</a><a href="https://www.rus-ltc.org/search">https://www.rus-ltc.org/search</a></p>
+</div>
+
+
+
+		</div>
+	</div>
+</body>
+</html>

@@ -7,7 +7,7 @@ body {
 section {
 	padding-top: 50px;
 }
-section *:first-child {
+section > *:first-child {
 	margin-top: 0;
 }
 p, li {
@@ -18,6 +18,9 @@ a {
 }
 li {
 	margin: 0.5em 0;
+}
+img {
+	max-width: 100%;
 }
 
 td {
@@ -51,6 +54,9 @@ td {
 .nav a {
 	color: black;
 }
+.nav h5 {
+	margin-top: 0;
+}
 
 .break td {
 	padding-top: 16px;
@@ -58,6 +64,10 @@ td {
 
 .content {
 	padding-left: 150px; 
+}
+
+.schedule table td:first-child {
+	white-space: nowrap;
 }
 
 @media (max-width: 500px) {
@@ -80,6 +90,9 @@ td {
 	.nav li {
 		margin: 6px;
 		font-size: 12px;
+	}
+	.nav h5 {
+		display: none;
 	}
 	.content {
 		padding-left: 0;
