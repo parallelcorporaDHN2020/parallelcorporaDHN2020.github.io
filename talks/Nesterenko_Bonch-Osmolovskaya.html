@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Computational Methods Meet Parallel Data: Approaches for
-		Comparative Analysis of Passives in European Languages</title>
+	<title>Quantitative analysis of passives with agent phrase based on multilingual parallel data</title>
 	<link rel="stylesheet" href="../style.css" />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,95 +23,60 @@
 			
 
 
-
-	
-	
-	
-	
-	
-	
-
 <p>
-<b>Computational Methods Meet Parallel Data: Approaches for
-Comparative Analysis of Passives in European Languages</b></p>
+<b>Quantitative analysis of passives with agent phrase based on multilingual parallel data</b></p>
 <p>
-<i>Liubov Nesterenko, Anastasia Bonch-Osmolovskaya</i></p>
+<i>Liubov Nesterenko</i></p>
 <p>
-<i>National Research University Higher School of Economics, Moscow</i></p>
+National Research University Higher School of Economics, Moscow</p>
 <p><br />
 
 </p>
-<p>	In
-this paper, I describe three applications of computational approaches
-in passive alternation research: "parallel" logistic
-regression for analysis of features that motivate the choice between
-active and passive in different languages; PCA scaling for measuring
-the similarity between the source passive construction and the
-language expressions used in translation; cluster analysis of similar
-translation units (translation unit = a set of translations for one
-source situation).</p>
+<p>In the last few years, works presenting quantitative analysis on parallel data tend to appear more often, which seems to be a big step forward in linguistic research. 
+Unfortunately, we still can not say that studies based on parallel data became mainstream among typologists (Levshina 2016), (Nesterenko 2019). </p>
 <p><i>	</i></p>
-<p>	I
-use a collection of J.K. Rowling Harry Potter books series from 1 to
-7 in English, German, Swedish, French, Italian, Spanish, Russian,
-Czech and Bulgarian, approximately 1 million tokens per language. The
-texts were aligned using Gale &amp; Church algorithm (Gale, Church
-1991) and Efmaral toolkit (Östling, Tiedeman 2016) for sentence and
-word alignment respectively, and also processed with UDPipe parser
-(Straka, Straková 2017). Automatical alignment and annotation is a
-huge step in data preparation, but I should note, that my dataset
-examples extracted from the corpus demanded manual check up and
-correction.</p>
-<p><br />
+<p>	Voice constructions are a phenomenon dependent on semantic and pragmatic factors and parallel data seems to be very suitable for their comparative analysis, particularly of their functional properties.
+ Since parallel texts represent situations with the same pragmatics in different languages, one can compare the form and function of a set of related constructions. The possibility of semantic annotation transfer is a huge benefit of parallel corpora, which is especially important for the research of voice and other alternations. Grammatical constructions can have very fine functional differences that, at first glance, may seem to be barely distinguishable. Analyzing such constructions in samples out of the context and without  quantitative assessment, it can be simply impossible to observe the whole range of potential usages and compare them cross-linguistically. Parallel data with complex annotation help to solve this problem and get more sophisticated results.</p>
 
-</p>
-<p>	<i>Experiment</i><i>
-1</i></p>
-<p>	A
-remarkable issue about voice alternation is the motivation for
-choosing active instead of passive, i.e. ‘This essay was written by
-Mary’ vs. ‘Mary wrote this essay’. Relying on theoretical
-studies, I selected a bunch of features claimed to be important for
-this kind of choice and used them for training logistic regression
-models. Based on model coefficients, we can detect which features
-appear to be passive triggers.</p>
-<p>	The
-major trick is that we use universal situation-based features
-applicable to all languages (one feature matrix), but the labels for
-model training vary depending on the language, e.g., five instances
-in Russian might be tagged as A, A, P, P, P (A for active, P for
-passive) but the corresponding instances in Spanish tagged P, A, P,
-P, A, in other words, different active/passive distributions result
-into different label sets for training (Bonch-Osmolovskaya,
-Nesterenko 2019).</p>
-<p><br />
+<p>	I will focus on the use of parallel data for the investigation of passives with agent phrases. 
+Passive constructions have been a field of interest among linguists for a long time, and there is plenty of studies on this topic, e.g. (Keenan, Dryer 1981),
+ (Shibatani 1988), (Givón 1994), (Tsunoda, Kageyama 2006), (Kulikov 2011), (Zúñiga & Kittilä 2019). 
+The example below illustrates the difference between active and passive voice:</p>
 
+<p>
+<table>
+	<tr>
+		<td>
+			<table>
+				<tr>
+				<td>(1)</td>
+				<td>a.</td>
+				<td><i>The paparazzi saw Zelda at the party.</i></td>
+				</tr>
+				<tr>
+				<td><i></i></td>
+				<td>b.</td>
+				<td><i>Zelda was seen by the paparazzi at the party.</i></td>
+				</tr>
+				<tr>
+					<td><i></i></td>
+					<td><i></i></td>
+					<td>(Zúñiga & Kittilä 2019)</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
 </p>
-<p>	<i>Experiment</i><i>
-2</i></p>
-<p>	Unlike
-the elicitation where linguists use the starred (=incorrect) examples
-as a special type of data, in translation a person is forced to
-choose any relevant language means for the translational equivalent,
-these expressions can be the same, quite similar or completely
-different from those used in the source text. Hence, we can measure
-the level of similarity for the translation and the source based on a
-number of their characteristics. I elaborate a set of features for
-passives with overtly expressed agents which reflect its similarity
-to the translation equivalents (transitive active, impersonal
-passive, etc.). This allows us to compute the level of similarity for
-each translation equivalent and also, based on that, compute an
-overall level of passiveness for each translation unit. As a result,
-I draw plots that represent the distribution of translation
-equivalents types in languages.</p>
-<p><br />
+	
+<p>	Usually one distinguishes between different types of passive constructions, and it is often indicated that the agent phrase 
+is optional, which seems to be misleading because passives with agent phrase (PAP) can not be interchangeably used with agentless passives. 
+Kiparsky questions the statement regarding the optionality of the agent phrase in his study and he also points out that 
+the distribution of agent phrases is governed by lexical and semantical mechanisms (Kiparsky 2013), see also (Siewierska, Bakker 2012). </p>
 
-</p>
-<p><br />
+<p>	In this paper, I will show that the use of PAP has a semantic motivation and it is not restricted to patient promotion/agent demotion
+ and stativization of the verb, functions claimed in (Zúñiga & Kittilä 2019). Also, using logistic regression models, I will show that there are languages, in which PAP is used mostly in semantically motivated situations and those that prefer to use PAP as a discourse-oriented construction. The study is based on a corpus of Harry Potter books series from 1 to 7 in English, German, Swedish, French, Italian, Spanish, Russian, Czech, and Bulgarian.</p>
 
-</p>
-<p>	<i>Experiment</i><i>
-3</i></p>
 <p>	A
 brief exploration of translation units shows that there are English
 passives translated as passives in all or almost all languages, but
@@ -131,30 +95,18 @@ can focus using either of them.</p>
 
 </p>
 <p><b>	References</b></p>
-<p>Bonch-Osmolovskaya
-A.A., Nesterenko L.V. (2019). Multilingual parallel corpora as a
-source for 	quantitative cross-linguistic grammar research (the case
-of voice constructions), in: 	Computational
-	Linguistics and Intellectual Technologies. International Conference
-	"Dialogue 2019"
-Proceedings / Ed. by V. Selegey. Vol. 1. Issue 18 (25). M. :
--, 2019.</p>
-<p>Gale
-W. A., Church K. W. (1991). Identifying Word Correspondences in
-Parallel Texts. HLT, 91, pp. 	152–157.</p>
-<p>Östling,
-R., Tiedemann, J. (2016). Efficient word alignment with markov chain
-montecarlo. The 	Prague Bulletin of Mathematical Linguistics, 106(1),
-pp. 125-146.</p>
-<p>Straka
-M., Straková J. (2017). Tokenizing, POS-tagging, lemmatizing and
-parsing UD 2.0 with 	UDPipe. Proceedings of the CoNLL 2017 Shared
-Task: Multilingual Parsing from Raw Text to 	Universal Dependencies,
-pp. 88–99.</p>
-<p>Wälchli
-B., Cysouw M. (2012). Lexical typology through similarity semantics:
-Toward a semantic map of motion verbs.</p>
-
+<p>Givón T. (1994). Voice and inversion (Vol. 28). John Benjamins Publishing Company.</p>
+<p>Kiparsky, P. (2013). Towards a null theory of the passive. Lingua, 125(1), 7-33.</p>
+<p>Keenan, E. L., Dryer, M. S. (1981). Passive in the world's languages. Linguistic Agency, University 	of Trier.</p>
+<p>Kulikov L. (2011), Voice typology. In The oxford handbook of linguistic typology. Oxford 	University Press, pp. 368-398
+</p>
+<p>Levshina, N. (2016). Why we need a token-based typology: A case study of analytic and lexical causatives in fifteen European languages. Folia Linguistica, 50(2), 507-542.</p>
+<p>Nesterenko, L. (2019). Multilingual Parallel Corpora: Alternative Source of Language Data for 	Typological Studies, Applying Perspectives and Problems. Voprosy Jazykoznanija, 1 Mar., 	111–125.</p>
+<p>Shibatani M. (1988), Passive and voice (Vol. 16). John Benjamins Publishing.</p>
+<p>Siewierska, A., & Bakker, D. (2012). Three takes on grammatical relations. Argument structure and 	grammatical relations: a crosslinguistic typology,126, 295.</p>
+<p>Tsunoda T., Kageyama T. (2006). Voice and grammatical relations: in honor of
+	Masayoshi Shibatani (Vol. 65). John Benjamins Publishing.</p>
+<p>Zúñiga, F., & Kittilä, S. (2019). Grammatical voice. Cambridge University Press.</p>
 
 
 		</div>
